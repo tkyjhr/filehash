@@ -43,6 +43,7 @@ func main() {
 		hashPrintCommand("SHA3-256", []string{"sha3-256", "s3-256"}, filehash.SHA3_256),
 		hashPrintCommand("SHA3-384", []string{"sha3-384", "s3-384"}, filehash.SHA3_384),
 		hashPrintCommand("SHA3-512", []string{"sha3-512", "s3-512", "s3"}, filehash.SHA3_512),
+		hashPrintCommand("MD4", []string{"md4", "m4"}, filehash.MD4),
 		hashPrintCommand("MD5", []string{"md5", "m5"}, filehash.MD5),
 		hashPrintCommand("CRC32-IEEE", []string{"crc32-ieee", "crc32", "c32"}, filehash.CRC32_IEEE),
 		hashPrintCommand("CRC64-ISO", []string{"crc64-iso"}, filehash.CRC64_ISO),
@@ -52,6 +53,7 @@ func main() {
 		hashPrintCommand("FNV-32a", []string{"fnv-32a"}, filehash.FNV32a),
 		hashPrintCommand("FNV-64", []string{"fnv-64"}, filehash.FNV64),
 		hashPrintCommand("FNV-64a", []string{"fnv-64a"}, filehash.FNV64a),
+		hashPrintCommand("RIPEMD160", []string{"ripemd160", "ripe"}, filehash.RIPEMD160),
 	}
 
 	app.Commands = commands

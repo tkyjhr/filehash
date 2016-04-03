@@ -13,6 +13,8 @@ import (
 	"io/ioutil"
 
 	"golang.org/x/crypto/sha3"
+	"golang.org/x/crypto/md4"
+	"golang.org/x/crypto/ripemd160"
 )
 
 // Calc returns the hash value of the file
@@ -76,6 +78,11 @@ func SHA3_512(file string) []byte {
 	return Calc(sha3.New512(), file)
 }
 
+// MD4 returns the MD4 hash value of the file
+func MD4(file string) []byte {
+	return Calc(md4.New(), file)
+}
+
 // MD5 returns the MD5 hash value of the file
 func MD5(file string) []byte {
 	return Calc(md5.New(), file)
@@ -119,4 +126,9 @@ func FNV64(file string) []byte {
 // FNV64a returns the 64-bit FNV-1a hash value of the file
 func FNV64a(file string) []byte {
 	return Calc(fnv.New64a(), file)
+}
+
+// RIPEMD160 returns the 64-bit RIPEMD160 hash value of the file
+func RIPEMD160(file string) []byte {
+	return Calc(ripemd160.New(), file)
 }
