@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/tkyjhr/filehash"
+	"github.com/tkyjhr/go-filehash"
 )
 
 func hashPrintCommand(name string, aliases []string, hashFunc func(file string) []byte) cli.Command {
